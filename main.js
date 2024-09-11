@@ -4,7 +4,7 @@ const buttonSend=document.getElementById("sendData");
 
 // Algoritmo de vulneración
 
-buttonSend.addEventListener("click", () =>{
+buttonSend.addEventListener("click", (realPass) =>{
     const possibleAlphabeticalValues="abcdefghijklmnopqrstuvwxyz";
 const possibleNumericalvalues="0123456789";
 let passwordTry="";
