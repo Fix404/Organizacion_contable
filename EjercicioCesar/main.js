@@ -11,7 +11,10 @@ textButton.addEventListener("click", () => {
     const codifiedTextHTML=document.getElementById("processedData");
     codifiedTextHTML.textContent=`Texto encriptado: ${codifiedText}`;
 
-    decodifier(codifiedText);
+    let decodifiedText="";
+    const decodifiedetxtHTML=document.getElementById("deProcessedData");
+    decodifiedText=decodifier(codifiedText);
+    decodifiedetxtHTML.textContent=`Texto descifrado: ${decodifiedText}`;
 
 });
 
@@ -37,7 +40,7 @@ function codifier(text){
 
     for (let i=0; i<27; i++){
         if(letterStats[i] != 0){
-            presentLetter+=1;
+            presentLetter+=letterStats[i];
         }
     }
 
@@ -53,6 +56,7 @@ function codifier(text){
 
 function decodifier(text){
     const letters="abcdefghijklmnñopqrstuvwxyz";
+    let deprocTextArray=[];
 
     for(let j=1; j<letters.length; j++){
         let deProcText="";
@@ -68,6 +72,8 @@ function decodifier(text){
             }
         }
 
-        console.log(deProcText);
+        deprocTextArray.push(deProcText+" ################### ");
     }
+
+    return deprocTextArray;
 }
