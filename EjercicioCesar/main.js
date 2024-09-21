@@ -38,13 +38,13 @@ function codifier(text){
 
     let presentLetter=0;
 
-    for (let i=0; i<27; i++){
+    for (let i=0; i<letters.length; i++){
         if(letterStats[i] != 0){
             presentLetter+=letterStats[i];
         }
     }
 
-    for (let i=0; i<27; i++){
+    for (let i=0; i<letters.length; i++){
         if(letterStats[i] != 0){
             console.log("El porcentaje de aparición de la letra ", letters[i], " es de: ", (letterStats[i]/presentLetter)*100, "%");
         }
