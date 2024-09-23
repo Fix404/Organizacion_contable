@@ -8,16 +8,19 @@
 </head>
 <body>
     <main>
-        <h2>Texto a encriptar:</h2>
+        <h2>Encriptación César:</h2>
         <form>
-            <textarea id="rawText" rows="20" cols="50"></textarea>
+            <!-- <textarea id="rawText" rows="20" cols="50"></textarea> -->
+            <input type="file" id="inputFile">
             <br>
+            <output id="output"></output>
             <button type="button" id="sendData">Encriptar</button>
+            <br>
             <br>
             <output id="processedData">Texto encriptado: </output>
             <br>
             <br>
-            <output id="deProcessedData">Texto decodificado: </output>
+            <output id="deProcessedData">Estadísticas: </output>
         </form>
     </main>
 </body>
